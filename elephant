@@ -1,0 +1,40 @@
+An elephant decided to visit his friend. It turned out that the elephant's house is located at point 0
+and his friend's house is located at point x (x > 0) of the coordinate line. In one step the elephant can
+move 1, 2, 3, 4 or 5 positions forward. Determine, what is the minimum number of steps he needs
+to make in order to get to his friend's house.
+Note: Check out the Sample I/O for more clarity.
+Input Format:
+The only line of input contains x as mentioned in the problem statement.
+Output Format:
+Print the minimum number of steps that elephant needs to make to get from point 0 to point x.
+Constraints:
+1 ≤ x ≤ 100000
+Sample I/O:
+Input 1:
+5
+Output 1:
+1
+Input 2:
+12
+Output 2:
+3
+3. Elections at Hogwarts
+Input 3:
+147
+Output 3:
+30
+Input 4:
+25
+Output 4:
+5
+Input 5:
+29
+Output 5:
+6
+Explanation:
+For Input 2,
+Elephant can move 5 positions forwards in 1st step, 5 more positions forward in 2nd step, and 2
+positions forward in 3rd step to reach point 12. So a total of 3 steps is required.
+For Input 5,
+Elephant can reach point 25 in just 5 steps by moving 5 positions forward in each step. From where
+only 1 more step (4 positions forward) is required to reach point 29
