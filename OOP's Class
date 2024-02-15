@@ -1,0 +1,40 @@
+//java OOps concept 
+//how to create class and object
+//OOPs of java main pillars are
+//	Abstraction
+	Encapsulation
+	Inheritance
+	Polymorphism
+
+Example1:
+
+class Student{
+    int id;
+    String name;
+    String branch;
+    String college;
+    double cgpa;
+    void setValues(int i,String n,String b,String c,double d){
+        id=i;
+        name=n;
+        branch=b;
+        college=c;
+        cgpa=d;
+    }
+
+}
+public class Thur154{
+    public static void main(String[] args){
+        Student s1=new Student();
+        s1.setValues(1,"viju","cse","acoe",8.5);
+        Student s2=new Student();
+        s2.setValues(2,"nick","aiml","acoe",8.3);
+        System.out.println(s1.name);
+        System.out.println(s2.college);
+
+    }
+}
+output:
+viju
+acoe
+
