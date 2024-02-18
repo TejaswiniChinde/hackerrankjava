@@ -1,0 +1,52 @@
+this programm
+
+class Thikw{
+    String name;
+    int age;
+    String campus;
+    String branch;
+
+    Thikw(String name){
+        this.name=name;
+        System.out.println(name);
+    }
+    Thikw(String name,int age){
+        this(name);
+        this.age=age;
+        System.out.println(name+" "+age);
+    }
+    Thikw(String name,int age,String campus){
+        this(name,age);
+        this.campus=campus;
+        System.out.println(name+" "+age+" "+campus);
+    }
+    Thikw(String name,int age,String campus,String branch){
+        this(name,age,campus);
+        this.branch=branch;
+        System.out.println(name+" "+age+" "+campus+" "+branch);
+    }
+
+    public void Display(){
+        System.out.println("name: "+name);
+        System.out.println("age: "+age);
+        System.out.println("campus: "+campus);
+        System.out.println("branch: "+branch);
+    }
+}
+
+public class drama{
+    public static void main(String[] args){
+        Thikw k1=new Thikw("Ko Mun Yeong");
+        Thikw k2=new Thikw("Moon Gang Tae",30);
+        Thikw k3=new Thikw("Moon Sang Tae",35,"OK psy hos");
+        Thikw k4=new Thikw("Tapaswini",19,"ACOE","CSE");
+        System.out.println(k1.name);
+        System.out.println(k2.age);
+        System.out.println(k3.campus);
+        System.out.println(k4.branch);
+        k1.Display();
+        k2.Display();
+        k3.Display();
+        k4.Display();
+    }
+}
