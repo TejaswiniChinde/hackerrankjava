@@ -1,0 +1,15 @@
+parsing example
+public class ParsingExample{
+    public static void main(String[] args){
+        String x="10";
+        String y="1100";
+        String z="ABC";
+        int a=Integer.parseInt(x);
+        int b=Integer.parseInt(y, 2);
+        int c=Integer.parseInt(z, 16);
+        System.out.println(a * a);
+        System.out.println(b);
+        System.out.println(c);
+
+    }
+}
