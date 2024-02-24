@@ -1,0 +1,12 @@
+public class userDefinedMethodsExample{
+    static void sayHello(){
+        System.out.println("HELLO WORLD!!!");
+    }
+    static boolean isFactor(int a,int b){
+        return a%b==0;
+    }
+    public  static void main(String[] args){
+        sayHello();
+        System.out.println(isFactor(10,2));
+    }
+}
