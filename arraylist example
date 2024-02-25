@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+public class ArrayListExample{
+    public static void main(String[] args){
+        ArrayList<Integer> arr=new ArrayList<>();
+        //ArrayList<Cat> Cat =new ArrayList<>();//Cats
+        //add() method -> to add new elements to arraylist
+        arr.add(10);
+        arr.add(20);
+        arr.add(30);
+        System.out.println(arr);
+        //get(index) method-> to access elements at index
+        System.out.println(arr.get(0));//elements of 0th index
+        System.out.println(arr.get(1));//elements of 1st index
+        //to check length of array list ->size();
+        System.out.println(arr.size());
+        //add(ind ,element) -->used to add the element
+        // add at index
+        arr.add(0,20);
+        System.out.println(arr);
+        //set(ind ,element)
+        arr.set(3, 100);
+        System.out.println(arr);
+        //remove here there is a 100 value but it represents indexs
+        arr.remove(3);
+        System.out.println(arr);
+        //remove the value here we indicates value Integer
+        arr.remove((Integer)100);
+        System.out.println(arr);
+        
+
+
+
+    }
+}
