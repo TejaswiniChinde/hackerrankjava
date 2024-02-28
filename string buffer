@@ -1,0 +1,15 @@
+public class Sat101{
+    public static void main(String[] args){
+        StringBuffer sb=new StringBuffer("hello");
+        System.out.println(sb);
+        sb.append(123);//appends 123 at the end of hello
+        sb.append(12.45);//appends 12.45 at the hello123
+        sb.setCharAt(0, 'p');//replace the char at 0th index with 'p'
+        sb.deleteCharAt(0);//removes character at 0th index
+        sb.insert(1, "pq");
+        System.out.println(sb);
+        String outputString =new String(sb);// conver
+        System.out.println(outputString.length());
+
+    }
+}
