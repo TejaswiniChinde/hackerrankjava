@@ -1,0 +1,20 @@
+single inheritance in java
+single inheritance is the concept of a subclass inheriting properties and behavior from a single superclass. 
+example program of single inheritance:
+class parent{
+    public void house(){
+        System.out.println("house");
+    }
+}
+class child extends parent{
+    public void book(){
+        System.out.println("book");
+    }
+}
+public class singleinherit{
+public static void main(String[] args){
+    child c=new child();
+    c.house();
+    c.book();
+}
+}
