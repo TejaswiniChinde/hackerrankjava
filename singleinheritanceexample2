@@ -1,0 +1,44 @@
+inheritance with constructors. its also a single inheritance with constructors.
+in the inheretance we use some words likeclass father{
+	
+	String name;
+    int age;
+    father(String name,int age){
+		this.name=name;
+		this.age=age;
+	}
+    public void display(){
+        System.out.println("father name is: "+name+",age is: "+age);
+    }
+
+}
+class child1 extends father{
+
+	int marks;
+	String college,id;
+	 child1(String college,String id,int marks,String name,int age){
+    super(name,age);
+	
+	this.college=college;
+	this.id=id;
+	this.marks=marks;
+	}
+	public void printInfo(){
+		      
+                System.out.println("child college: "+college+",id is:"+id+"marks is "+marks);
+
+	}
+
+}
+public class inherit{
+     public static void main(String[] args){
+        father p1=new father("teja",12);  
+        child1 c1=new child1("Acoe","23",87,"aditya",18);
+        p1.display();
+	    c1.printInfo();
+}
+}
+subclass
+super class
+extend word
+program :
