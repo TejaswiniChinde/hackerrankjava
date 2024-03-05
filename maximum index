@@ -1,0 +1,37 @@
+geeks for geeks 
+find maximum index of array:
+PROBLEMS:
+------------------------------------------------------
+
+
+public class MaxIndexDiff {
+    public static int maxIndexDiff(int[] arr) {
+        int n = arr.length;
+        int[] minIndex = new int[n];
+        int[] maxDiff = new int[n];
+
+        // Step 1: Find the minimum value so far for each index
+        minIndex[0] = arr[0];
+        for (int i = 1; i < n; i++) {
+            minIndex[i] = Math.min(minIndex[i - 1], arr[i]);
+        }
+
+        // Step 2: Find the maximum difference (j - i)
+        int maxDifference = 0;
+        for (int j = n - 1, i = n - 2; j >= 0 && i >= 0;) {
+            if (arr[j] >= minIndex[i]) {
+                maxDifference = Math.max(maxDifference, j - i);
+                j--;
+            } else {
+                i--;
+            }
+        }
+
+        return maxDifference;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {9, 2, 3, 4, 5, 6, 7, 8, 18, 0};
+        System.out.println("Maximum difference: " + maxIndexDiff(arr));
+    }
+}
