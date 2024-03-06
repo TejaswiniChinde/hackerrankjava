@@ -1,0 +1,22 @@
+
+public class taskExample{
+    static void printArray(Integer[] A){
+        for(Integer val: A){
+            System.out.println(val + " ");
+        }
+        System.out.println();
+    }
+    static void printArray(Character[] C){
+        for(Character val: C){
+            System.out.println(val + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args){
+        Integer[] arr={10,20,30,40};
+        printArray(arr);
+        Character[] arr1={'A','t','$','R'};
+        printArray(arr1);
+
+    }
+}
