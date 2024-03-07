@@ -1,0 +1,32 @@
+ABSTRACT CLASS:
+Abstraction is nothing but a hiding some details and showing only the details that are necessary.
+i)An abstract method is method without body.
+ii)Abstract methods can be created by adding a keyword ‘abstract’ in front of the method.
+iii)If a class contains at least one abstract method then you have to make the class also as abstract.
+iv)You cannot create instance of abstract class.
+v)Abstract classes can also contain concrete methods (methods with body).
+vi)The major use abstract classes can be used in inheritance. a class which inherits from an abstract class should provide the implementation of the abstract method.
+example program:
+abstract class Animals{
+    abstract void introduce();
+}
+class Catas extends Animals{
+    void introduce(){
+        System.out.println("Hey,I'm a Cat");
+    }
+}
+class Elephant extends Animals{
+    void introduce(){
+        System.out.println("Hey,I'm an Elephant");
+    }
+}
+
+
+public class Exp1abstract{
+    public static void main(String[] args){
+    Catas c1=new Catas();
+    c1.introduce();
+    }
+}
+output:
+Hey, I'm a Cat
