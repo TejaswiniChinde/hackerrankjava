@@ -1,0 +1,53 @@
+import javax.swing.JFrame;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;///interface
+import java.awt.event.ActionEvent;//Class
+class DoSomething implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+        System.out.p
+    }
+}
+
+public class gui1{
+    public static void main(String[] args){
+        JFrame window=new JFrame("MyFrame");
+       // window.setTitle("MyFrame");
+       window.getContentPane().setBackground(Color.blue);
+
+       window.setLayout(null);
+      //Lables->Jlabel->Swing
+      //An object of JLabel class
+      JLabel lb1=new JLabel();
+      lb1.setText("My FIrst JAVA GUI program-JAVA FUNdaMentALS");
+      lb1.setBounds(0,300,450,30);  //0 position on x-axis,300 i s position on y-axis
+      //you need to create an object JButton
+      JButton button=new JButton();
+      button.setText("Click Me!");
+      button.setBounds(50, 200, 120, 300);
+      
+
+      //actionListener
+      button.addActionListener(new DoSomething());
+
+      //ADd a component to window
+      window.add(lb1);
+      window.add(button);
+      lb1.setForeground(Color.red);
+      
+     /*  Font myFont = new Font("MV Boli",Font.BOLD,25);
+      lb1.setFont(myFont);*/
+      lb1.setFont(new Font("MV Boli",Font.BOLD,25) );
+
+      
+
+
+        window.setResizable(false);
+        window.add(button);
+        window.setSize(500,500);
+        window.setVisible(true);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
