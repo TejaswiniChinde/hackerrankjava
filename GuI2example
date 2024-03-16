@@ -1,0 +1,20 @@
+GUI how to set image icon 
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+public class GUIComboBox{
+    public static void main(String[] args){
+        JFrame frame=new JFrame("ComboBox Demo");
+        frame.setResizable(false);
+        frame.setSize(500,500);
+
+        frame.setLayout(null);
+
+        ImageIcon img=new ImageIcon("/C://Users//tapas//Downloads//WhatsApp Image 2024-03-16 at 09.44.01.jpeg/");
+        frame.setIconImage(img.getImage());
+
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
