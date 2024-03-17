@@ -1,0 +1,29 @@
+gui example3
+
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JComboBox;
+public class GUIComboBox{
+    public static void main(String[] args){
+        JFrame frame=new JFrame("ComboBox Demo");
+        frame.setResizable(false);
+        frame.setSize(500,500);
+        frame.setLayout(null);
+
+        ImageIcon img=new ImageIcon("/C://Users//tapas//Downloads//WhatsApp Image 2024-03-16 at 09.44.01.jpeg/");
+        frame.setIconImage(img.getImage());
+
+        //combobox creation
+        String[] boxItems={"Harry","Ginny","Ron"};
+        JComboBox<String> cb = new JComboBox<>(boxItems);
+       /*  cb.addItem("Harry");
+        cb.addItem("Ginny");  */
+        cb.setBounds(100,100,150,150);
+        frame.add(cb);
+
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
