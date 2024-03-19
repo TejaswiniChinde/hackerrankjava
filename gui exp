@@ -1,0 +1,72 @@
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.JLabel;
+public class GUIExampleComboBox{
+    public static void main(String[] args){
+        JFrame frame=new JFrame("ComboBox Example");
+        frame.setSize(500,500);
+        frame.setResizable(false);
+        frame.setLayout(null);
+        ImageIcon img=new ImageIcon("C:/Users/Tejaswini/Downloads/WhatsApp Image 2024-03-16 at 9.44.01 AM.jpeg");
+        frame.setIconImage(img.getImage());
+
+        //ComboBox->create an object of class JComboBox
+       /*  JComboBox box=new JComboBox();
+        box.addItems("Apple");
+        box.addItems("Banana");
+        box.addItems("Mosambi");
+        box.addItems("orange");
+        */
+
+        String[] boxItems={"Apple","Banana","Mosambi","orange"};
+        JComboBox<String> box=new JComboBox<>(boxItems); 
+        String[] associations={"apple apple red red  apple very very sweet apple",
+                               "banana banana yellow yellow banana verry very sweet banana",
+                               "moambi mosambi green green mosambi very very sweet mosambi",
+                               "orange orange ornge orange orange very very sweet orange"} ;
+       Color[] colors={Color.red,Color.green,Color.yellow,Color.orange};
+     
+       
+        box.setFont(new Font("MV Boli",Font.BOLD,15));
+        box.setForeground(Color.red);
+        box.setBounds(100,100,100,100);
+        box.setSelectedItem(null);
+        //box.setForeground(color.red);
+       // box.setBackground(Color.blue);
+        box.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                //System.out.println(box.getSelectedItem());
+                //System.out.println(box.getSelectedIndex());
+            
+                /*int ind=box.getSelectedIndex();
+                JOptionPane.showMessageDialog(null,associations[ind]);
+                //window appear on top of box component
+                 */
+/* 
+                 if(box.getSelectedItem().equals("Red")){
+                    label.setBackground(Color.red);
+                 }else if(box.getSelectedItem().equals("Green")){
+                    label.setBackground(Color.pink);
+                 }
+                 */
+            }
+        });
+
+        JLabel label=new JLabel();
+        label.setBounds(100,160,300,300);
+        label.setBackground(Color.green);
+        label.setOpaque(true);
+        frame.add(label);
+        box.setBounds(100,100,150,50);
+
+        frame.add(box);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
