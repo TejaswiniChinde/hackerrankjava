@@ -1,0 +1,18 @@
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        // code here
+         StringBuilder a=new StringBuilder();
+        StringBuilder b=new StringBuilder();
+        
+        for(int i = S1.length()-1;i >= 0 ; i--)
+        {
+            a.append(S1.charAt(i));
+        }
+        for(int i = S2.length()-1;i >= 0 ; i--)
+        {
+            b.append(S2.charAt(i));
+        }
+        
+        return (b.append(a)).toString();
+    }
+}
