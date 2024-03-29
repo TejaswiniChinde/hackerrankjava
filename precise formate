@@ -1,0 +1,11 @@
+
+class Geeks{
+    
+    static void printInFormat(float a, float b){
+        float result = a/b;
+        
+        
+        
+    }    
+    
+}
