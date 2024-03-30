@@ -1,0 +1,53 @@
+import java.lang.reflect.Method;
+
+class Example {
+    public static void main(String[] arr) {
+        for (String s : arr) {
+            System.out.print(s + " ");
+        }
+    }
+
+    public static void printArray(String[] arr) {
+        for (String s : arr) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+
+    public static void printArray(Integer[] arr) {
+        for (Integer s : arr) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+
+    public static void printArray(Double[] arr) {
+        for (Double s : arr) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+}
+
+public class throwExample {
+    public static void main(String[] args) {
+        Method[] methods = Example.class.getDeclaredMethods();
+        int cnt = 0;
+        for (Method m : methods) {
+            if (m.getName().equals("printArray")) {
+                cnt++;
+            }
+        }
+        if (cnt > 1) {
+            // throwing exceptions on the fly
+            throw new RuntimeException("No Overloading is allowed");
+        }
+        String[] arr = {"abc", "xyz", "pqr"};
+        Integer[] arr1 = {10, 20, 30, 40, 50};
+        Double[] arr2 = {12.3, 13.4};
+
+        Example.printArray(arr);
+        Example.printArray(arr1);
+        Example.printArray(arr2);
+    }
+}
