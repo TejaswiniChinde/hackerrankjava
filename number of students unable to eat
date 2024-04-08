@@ -1,0 +1,28 @@
+class Solution {
+public:
+    int countStudents(vector<int>& students, vector<int>& sandwiches) {
+        queue<int> studentQueue;
+        for (int student : students)
+            studentQueue.push(student);
+        
+        int unableToEat = 0;
+        int index = 0;
+        while (!studentQueue.empty()) {
+            int currentStudent = studentQueue.front();
+            studentQueue.pop();
+            if (currentStudent == sandwiches[index]) {
+                index++; 
+                unableToEat = 0;
+            } else {
+                studentQueue.push(currentStudent);
+                unableToEat++;
+            }
+            
+            
+            if (unableToEat == studentQueue.size())
+                break;
+        }
+        
+        return studentQueue.size();
+    }
+};
