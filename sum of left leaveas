@@ -1,0 +1,25 @@
+class Solution {
+public:
+    
+        int sumOfLeftLeaves(TreeNode* root) {
+        if (!root) 
+            return 0;
+        
+        int sum = 0;
+        dfs(root, false, sum); 
+        
+        return sum;
+    }
+    
+    void dfs(TreeNode* node, bool isLeft, int& sum) {
+        if (!node) 
+            return;
+        
+        if (!node->left && !node->right && isLeft) 
+            sum += node->val;
+        
+ 
+        dfs(node->left, true, sum);
+        dfs(node->right, false, sum);
+    }
+};
