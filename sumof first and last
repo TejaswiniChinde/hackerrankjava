@@ -1,0 +1,22 @@
+public class Main { 
+    public static void main(String[] args) { 
+        int number = 12345; 
+        int sum = addFirstAndLastDigit(number); 
+        System.out.println("Sum of first and last digit: " + sum); 
+    } 
+ 
+    public static int addFirstAndLastDigit(int number) { 
+        String numStr = String.valueOf(number); 
+ 
+        // Extract the first and last characters 
+        char firstDigit = numStr.charAt(0); 
+        char lastDigit = numStr.charAt(numStr.length() - 1); 
+ 
+        // Convert characters to integers and calculate the sum 
+        int first = Character.getNumericValue(firstDigit); 
+        int last = Character.getNumericValue(lastDigit); 
+        int sum = first + last; 
+ 
+        return sum; 
+    } 
+} 
