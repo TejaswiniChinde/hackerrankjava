@@ -1,0 +1,25 @@
+import java.util.*;
+public class Sol{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        while (m < n) {
+        boolean flag = false;
+
+            for(int i = 2; i <= m/2; ++i) {
+             
+                if(m % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag && m != 0 && m != 1)
+                System.out.print(m +" ");
+
+            ++m;
+    }
+}
+}
+
