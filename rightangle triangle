@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ReverseRightAngleTrianglePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Reading the number of rows
+        System.out.print("Enter the number of rows (N): ");
+        int N = scanner.nextInt();
+
+        // Reading the starting number on the bottom
+        System.out.print("Enter the starting number on the bottom (S): ");
+        int S = scanner.nextInt();
+
+        scanner.close();
+
+        // Initialize the starting number
+        int currentNumber = S;
+
+        // Print the reverse right-angle triangle pattern
+        for (int i = N; i >= 1; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(currentNumber + " ");
+                currentNumber++;
+            }
+            System.out.println();
+        }
+    }
+}
